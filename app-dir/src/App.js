@@ -1,10 +1,21 @@
+import {useEffect} from 'react'
 import './App.css';
+import WebFont from 'webfontloader'
+import Nav from './components/Nav'
+
 
 
 function App() {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Marcellus', 'Dosis', 'Mitr']
+      }
+    })
+  },[])
   return (
     <div>
-      <h1>Apply Chain Home Page</h1>
+      <Nav />
     </div>
   )
 }

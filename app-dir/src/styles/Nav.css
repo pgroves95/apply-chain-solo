@@ -1,0 +1,17 @@
+.container {
+  background-color: #126181;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+a {
+  color: #fff;
+  font-family: 'Marcellus';
+}
+
+img {
+  max-width: 8rem;
+  border-radius: 5%;
+}

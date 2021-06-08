@@ -1,11 +1,11 @@
 import React from 'react'
 
-function ViewAllApps() {
+function Home() {
     return (
         <div>
-            
+            <h2>Home</h2>
         </div>
     )
 }
 
-export default ViewAllApps
+export default Home
