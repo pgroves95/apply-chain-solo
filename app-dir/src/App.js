@@ -1,12 +1,12 @@
 import './App.css';
-import ApplyForm from './components/ApplyForm'
+
 
 function App() {
   return (
-    <div className="App">
-      <ApplyForm />
+    <div>
+      <h1>Apply Chain Home Page</h1>
     </div>
-  );
+  )
 }
 
 export default App;
