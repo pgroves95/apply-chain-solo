@@ -8,17 +8,17 @@ import {
 } from '../actions/action-types'
 
 const initialState = {
-    unreadApps: [{}],
-    undecidedApps: [{}],
-    acceptedApps: [{}],
-    rejectedApps: [{}]
+    unreadApps: [],
+    undecidedApps: [],
+    acceptedApps: [],
+    rejectedApps: []
 }
 
 export const addSubmittedApp = (state=initialState, action) => {
     switch(action.type) {
         case ADD_TO_UNREAD:
             state.unreadApps.push(action.payload)
-            return state
+            return ({...state})
         default:
             return state
     }

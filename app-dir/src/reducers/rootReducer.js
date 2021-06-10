@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux'
-import handleInputChange from './applyFormReducer'
-import {
-    addSubmittedApp
-} from './viewApplicationsReducer'
+import { handleInputChange } from './applyFormReducer'
+import { addSubmittedApp } from './viewApplicationsReducer'
 
 const rootReducer = combineReducers({
     handleInputChange,

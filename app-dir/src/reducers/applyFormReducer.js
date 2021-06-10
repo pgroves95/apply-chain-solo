@@ -4,7 +4,8 @@ import {
         EMAIL_INPUT,
         PHONE_INPUT,
         EXTENDED_INPUT_1,
-        EXTENDED_INPUT_2
+        EXTENDED_INPUT_2,
+        RESET_INPUTS
     } from '../actions/action-types'
 
 const initialState = {
@@ -18,9 +19,7 @@ const initialState = {
 
 }
 
-
-
-const handleInputChange = (state=initialState, action) => {
+export const handleInputChange = (state=initialState, action) => {
     switch(action.type) {
         case FIRST_NAME_INPUT:
             return ({...state, firstName: action.payload})
@@ -35,10 +34,9 @@ const handleInputChange = (state=initialState, action) => {
         case EXTENDED_INPUT_2:
             return ({...state, ext2: action.payload})
         case RESET_INPUTS:
-            return(iniitalState)
+            state = initialState
+            return state
         default:
-            return state;
+            return state
     }
 }
-
-export default handleInputChange

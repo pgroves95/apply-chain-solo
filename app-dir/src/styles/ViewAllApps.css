@@ -1,4 +1,7 @@
-.container {
+.ViewContainer {
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 4fr 1fr;
@@ -8,6 +11,8 @@
     'UnreadHeader UndecidedHeader ApprovedHeader'
     'UnreadApps UndecidedApps ApprovedApps'
     'RejectedApps RejectedApps RejectedApps';
+
+  font-family: 'Dosis';
 }
 
 .RejectedApps {
@@ -28,6 +33,9 @@
 
 .UnreadApps {
   grid-area: UnreadApps;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .UndecidedApps {

@@ -1,36 +1,23 @@
-import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
-import AppCondensed from './AppCondensed'
-import { nanoid } from 'nanoid'
+import UnreadAppsContainer from './UnreadAppsContainer'
+import UndecidedAppsContainer from './UndecidedAppsContainer'
+import ApprovedAppsContainer from './ApprovedAppsContainer'
+import '../../styles/ViewAllApps.css'
 
 function ViewAllApps() {
-    const unreadApps = useSelector(state=>state.unreadApps)
-    useEffect(()=> {
-        return
-    },[unreadApps])
-    if(unreadApps){
-        return (<div>
-                {unreadApps.map((app) => {
-                    return( 
-                    <AppCondensed
-                    firstName={app.firstName}
-                    lastName={app.lastName}
-                    email={app.email}
-                    phone={app.phone}
-                    key={nanoid()}
-                    />
-                    )
-                })}
-                </div>
-        )
-    }
-    else {
-        return(
-            <div>
-                <h2>No Unread Applications</h2>
-            </div>
-        )
-    }
+    
+    return(
+        <div className="ViewContainer">
+            <h1 className="UnreadHeader">Unread Applications</h1>
+            <h1 className="UndecidedHeader">Undecided Applications</h1>
+            <h1 className="ApprovedHeader">Approved Applications</h1>
+            <div><UnreadAppsContainer /></div>
+            <div><UndecidedAppsContainer /></div>
+            <div><ApprovedAppsContainer /></div>
+            <div></div>
+            
+        </div>
+    )
+
 }
 
 export default ViewAllApps

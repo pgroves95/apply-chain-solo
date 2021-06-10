@@ -1,9 +1,12 @@
 .container {
   background-color: #126181;
-  padding: 0.6rem;
+  padding: 0.6rem 3rem;
+  padding-right: 10rem;
+  height: 4.5rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .linkNav {
@@ -13,6 +16,7 @@
 }
 
 img {
-  max-width: 8rem;
+  max-width: 10rem;
+  margin-left: 1rem;
   border-radius: 5%;
 }

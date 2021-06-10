@@ -1,0 +1,22 @@
+.AppCondensedCard {
+  width: 12rem;
+  font-family: 'Dosis';
+  color: #e0d998;
+  background-color: #126181;
+  border: 5px solid #0f2836;
+  border-radius: 5%;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #e0d998;
+  border-radius: 5%;
+  margin-bottom: 1rem;
+  padding: 0.2rem;
+  font-family: 'Dosis';
+  font-size: 1.2rem;
+}
+
+.CondensedInfoList {
+  font-family: 'Mitr';
+}

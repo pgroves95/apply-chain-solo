@@ -1,0 +1,13 @@
+.HomeContainer {
+  font-family: 'Dosis';
+  padding-top: 4rem;
+  background-color: #1e8cbf;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home-description {
+  font-family: 'Mitr';
+}

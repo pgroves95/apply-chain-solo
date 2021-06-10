@@ -4,6 +4,7 @@ import {FIRST_NAME_INPUT,
     PHONE_INPUT,
     EXTENDED_INPUT_1,
     EXTENDED_INPUT_2,
+    RESET_INPUTS
     } from './action-types'
 
 export const handleFirstName = (dispatch, value) => {
@@ -28,5 +29,9 @@ export const handleExt1 = (dispatch, value) => {
 
 export const handleExt2 = (dispatch, value) => {
     return dispatch({type: EXTENDED_INPUT_2, payload: value})
+}
+
+export const resetInputs = (dispatch,value) => {
+    return dispatch({type: RESET_INPUTS, payload:value})
 }
 
