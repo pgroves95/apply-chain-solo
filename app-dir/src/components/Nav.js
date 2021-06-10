@@ -12,9 +12,9 @@ function Nav() {
        <Router>
            <div className="container">
                <img src={logo} alt="logo" /> 
-               <h5><Link to="/apply">Apply</Link></h5>
-               <h5><Link to="/view-all-apps">View Applications</Link></h5>
-               <h5><Link to="/">Home</Link></h5>
+               <h5><Link className="linkNav" to="/apply">Apply</Link></h5>
+               <h5><Link className="linkNav" to="/view-all-apps">View Applications</Link></h5>
+               <h5><Link className="linkNav" to="/">Home</Link></h5>
            </div>
        <Switch>
         <Route exact path="/apply">

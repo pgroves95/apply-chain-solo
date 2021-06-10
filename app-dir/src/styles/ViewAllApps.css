@@ -1,0 +1,39 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  gap: 7px 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'UnreadHeader UndecidedHeader ApprovedHeader'
+    'UnreadApps UndecidedApps ApprovedApps'
+    'RejectedApps RejectedApps RejectedApps';
+}
+
+.RejectedApps {
+  grid-area: RejectedApps;
+}
+
+.UnreadHeader {
+  grid-area: UnreadHeader;
+}
+
+.UndecidedHeader {
+  grid-area: UndecidedHeader;
+}
+
+.ApprovedHeader {
+  grid-area: ApprovedHeader;
+}
+
+.UnreadApps {
+  grid-area: UnreadApps;
+}
+
+.UndecidedApps {
+  grid-area: UndecidedApps;
+}
+
+.ApprovedApps {
+  grid-area: ApprovedApps;
+}
