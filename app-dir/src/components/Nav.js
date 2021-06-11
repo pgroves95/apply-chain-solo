@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import ApplyForm from './Applicant/ApplyForm'
 import ViewAllApps from './HiringManager/ViewAllApps'
 import NotFound404 from './NotFound404'
+import Footer from './Footer'
 import Home from './Home'
 import logo from '../logo.png' 
 
@@ -11,7 +12,7 @@ function Nav() {
     return (
        <Router>
            <div className="container">
-            <Link className="linkNav" to="/"><img src={logo} alt="logo" /></Link>
+            <Link className="linkNav" to="/"><img className="logo" src={logo} alt="logo" /></Link>
             <h5><Link className="linkNav" to="/apply">Apply</Link></h5>
             <h5><Link className="linkNav" to="/view-all-apps">View Applications</Link></h5> 
            </div>
@@ -29,6 +30,7 @@ function Nav() {
             <NotFound404 />
         </Route>       
        </Switch>
+       <Footer />
        </Router>
 
     )

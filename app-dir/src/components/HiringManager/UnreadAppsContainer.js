@@ -4,6 +4,8 @@ import {useSelector} from 'react-redux'
 import AppDetailed from './AppDetailed'
 import '../../styles/ViewAllApps.css'
 
+
+
 function UnreadAppsContainer() {
     const unreadApps = useSelector(state=>state.addSubmittedApp.unreadApps)
     return (

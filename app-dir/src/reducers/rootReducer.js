@@ -1,11 +1,12 @@
 import { combineReducers } from 'redux'
 import { handleInputChange } from './applyFormReducer'
-import { addSubmittedApp, getAppsFromDB } from './viewApplicationsReducer'
+import { addSubmittedApp, getAppsFromDB, changeAppStatus } from './viewApplicationsReducer'
 
 const rootReducer = combineReducers({
     handleInputChange,
     addSubmittedApp,
-    getAppsFromDB
+    getAppsFromDB,
+    changeAppStatus
 })
 
 export default rootReducer

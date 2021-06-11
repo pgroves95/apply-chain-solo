@@ -1,7 +1,9 @@
 import {
     ADD_TO_UNREAD,
     FETCH_APPROVED_APPS,
-    FETCH_UNREAD_APPS
+    FETCH_UNREAD_APPS,
+    MARK_ACCEPTED,
+    MARK_REJECTED
 
 } from './action-types'
 
@@ -15,4 +17,12 @@ export const fetchApprovedApps = (dispatch, value) => {
 
 export const fetchUnreadApps = (dispatch, value) => {
     return dispatch({type: FETCH_UNREAD_APPS, payload: value})
+}
+
+export const acceptApp = (dispatch, value) => {
+    return dispatch({type: MARK_ACCEPTED, payload: value})
+}
+
+export const rejectApp = (dispatch, value) => {
+    return dispatch({type: MARK_REJECTED, payload: value})
 }

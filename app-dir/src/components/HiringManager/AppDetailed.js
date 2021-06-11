@@ -1,10 +1,13 @@
 import React from 'react';
+import {useDispatch} from 'react-redux'
+import {acceptApp, rejectApp} from '../../actions/viewApplicationsActions'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { findByLabelText } from '@testing-library/dom';
 
 const useStyles = makeStyles({
   root: {
@@ -23,7 +26,10 @@ const useStyles = makeStyles({
     maxWidth: 280
   },
   actions: {
-    padding: '0 5% 5% 30%;'
+    paddingBottom: 12,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   },
   acceptBtn: {
     background: '#8afa8a;'
@@ -34,8 +40,15 @@ const useStyles = makeStyles({
 });
 
 export default function AppDetailed(props) {
-  const classes = useStyles();
+  const dispatch = useDispatch()
   const {app} = props
+  const handleAcceptApp = () =>{
+    acceptApp(dispatch, app.phone)
+  }
+  const handleRejectApp = () =>{
+    rejectApp(dispatch, app.phone)
+  }
+  const classes = useStyles();
 
   return (
     <Card className={classes.root} raised={true}>
@@ -57,8 +70,8 @@ export default function AppDetailed(props) {
           </Typography>
       </CardContent>
       <CardActions className={classes.actions}>
-        <Button className={classes.acceptBtn} size="small">Accept</Button>
-        <Button className={classes.rejectBtn} size="small">Reject</Button>
+      {!app.approved ?<Button className={classes.acceptBtn} onClick={()=>handleAcceptApp()} size="small">Accept</Button>: <div />  }
+       <Button className={classes.rejectBtn} onClick={()=>handleRejectApp()} size="small">Reject</Button>
       </CardActions>
     </Card>
   );

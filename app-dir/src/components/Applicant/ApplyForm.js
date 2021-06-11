@@ -34,16 +34,18 @@ function ApplyForm() {
         </ul>
         <p>If you think you fit the bill, please fill out the application below! 
         We usually respond to candidates within 30 minutes.</p>
+        <div className="form-container">
             <TextField id="filled-basic" variant="filled" className="form-field" type="text" value={state.handleInputChange.firstName} placeholder="first name" onChange={(e)=>handleFirstName(dispatch, e.target.value)}/>
             <TextField id="filled-basic" variant="filled" className="form-field" type="text" value={state.handleInputChange.lastName} placeholder="last name" onChange={(e)=>handleLastName(dispatch, e.target.value)}/>
             <TextField id="filled-basic" variant="filled" className="form-field" type="text" value={state.handleInputChange.email} placeholder="email" onChange={(e)=>handleEmail(dispatch, e.target.value)}/>
             <TextField id="filled-basic" variant="filled" className="form-field" type="text" value={state.handleInputChange.phone} placeholder="mobile number" onChange={(e)=>handlePhone(dispatch, e.target.value)}/>
             <TextField id="filled-basic" variant="filled" multiline="true" className="form-field" value={state.handleInputChange.ext1} name="q1" cols="30" rows="10" onChange={(e)=>handleExt1(dispatch, e.target.value)} placeholder="Tell us about a time when you showed entrepreneurship in an non-enterpreneurial situation."></TextField>
             <TextField id="filled-basic" variant="filled" multiline="true" className="form-field" value={state.handleInputChange.ext2} name="q1" cols="30" rows="10" onChange={(e)=>handleExt2(dispatch, e.target.value)} placeholder="If you had to choose between saving your relationships or sending this company to the moon, tell us which one you would pick and why."></TextField>
-            <Button onClick={()=>{
+            <Button variant="contained" className="btn" onClick={()=>{
                 addSubmittedApp(dispatch, state.handleInputChange)
                 resetInputs(dispatch, state)
                 }}>Shoot for the Moon</Button>
+        </div>
         </div>
     )
 }

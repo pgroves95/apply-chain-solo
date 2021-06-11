@@ -40,11 +40,32 @@ export const getAppsFromDB = (state=initialState, action) => {
 export const changeAppStatus = (state=initialState, action) => {
     switch(action.type){
         case MARK_ACCEPTED:
-            return
+            for(let [i,app] of state.unreadApps.entries()){
+                if(app.phone === action.payload){
+                    state.acceptedApps.push(app)
+                    state.unreadApps.splice(i,1)
+                    return {...state}
+                }
+            }
+            return state
         case MARK_REJECTED:
-            return
+            for(let [i,app] of state.acceptedApps.entries()){
+                if(app.phone === action.payload){
+                    // state.rejectedApps.push(app)
+                    state.acceptedApps.splice(i,1)
+                    return {...state}
+                }
+            }
+            for(let [i,app] of state.unreadApps.entries()){
+                if(app.phone === action.payload){
+                    // state.rejectedApps.push(app)
+                    state.unreadApps.splice(i,1)
+                    return {...state}
+                }
+            }
+            return state
         default:
-            return
+            return state
     } 
 }
 
