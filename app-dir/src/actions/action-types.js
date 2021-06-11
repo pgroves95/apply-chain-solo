@@ -10,8 +10,8 @@ export const RESET_INPUTS = "RESET_INPUTS"
 
 
 //Fetch and list filler applications
-export const FETCH_APPLICATIONS = "FETCH_APPLICATIONS"
-export const MAP_APPS_TO_CHILDREN = "MAP_APPS_TO_CHILDREN"
+export const FETCH_APPROVED_APPS = "FETCH_APPROVED_APPS"
+export const FETCH_UNREAD_APPS = "FETCH_UNREAD_APPS"
 
 //Change Application Status
 export const ADD_TO_UNREAD = "ADD_TO_UNREAD"
