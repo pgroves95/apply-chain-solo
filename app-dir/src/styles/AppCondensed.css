@@ -3,7 +3,7 @@
   font-family: 'Dosis';
   color: #e0d998;
   background-color: #126181;
-  border: 5px solid #0f2836;
+  border: 2px solid #0f2836;
   border-radius: 5%;
   margin-bottom: 1rem;
 }
@@ -18,5 +18,7 @@ button {
 }
 
 .CondensedInfoList {
+  text-align: left;
   font-family: 'Mitr';
+  list-style-type: none;
 }

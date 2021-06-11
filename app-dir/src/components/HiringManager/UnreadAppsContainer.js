@@ -1,14 +1,14 @@
 import React from 'react'
 import {nanoid} from 'nanoid'
 import {useSelector} from 'react-redux'
-import AppCondensed from './AppCondensed'
+import AppDetailed from './AppDetailed'
 import '../../styles/ViewAllApps.css'
 
 function UnreadAppsContainer() {
     const unreadApps = useSelector(state=>state.addSubmittedApp.unreadApps)
     return (
     <div className="UnreadApps">     
-    {unreadApps ? unreadApps.map((app) => <AppCondensed app={app} key={nanoid()} />) : <div>no unread apps</div>}
+    {unreadApps.length ? unreadApps.map((app) => <AppDetailed app={app} key={nanoid()} />) : <h2>No Unread Applications</h2>}
     </div>
 )
 }
