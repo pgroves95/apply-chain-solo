@@ -15,7 +15,5 @@ export const FETCH_UNREAD_APPS = "FETCH_UNREAD_APPS"
 
 //Change Application Status
 export const ADD_TO_UNREAD = "ADD_TO_UNREAD"
-export const VIEW_DETAILS = "VIEW_DETAILS"
-export const MARK_UNDECIDED = "MARK_UNDECIDED"
 export const MARK_ACCEPTED = "MARK_ACCEPTED"
 export const MARK_REJECTED = "MARK_REJECTED"
