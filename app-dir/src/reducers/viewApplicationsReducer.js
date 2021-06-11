@@ -1,11 +1,11 @@
 import {
-    FETCH_APPLICATIONS,
-    MAP_APPS_TO_CHILDREN,
+    FETCH_APPROVED_APPS,
+    FETCH_UNREAD_APPS,
     ADD_TO_UNREAD,
-    MARK_UNDECIDED,
     MARK_ACCEPTED,
     MARK_REJECTED
 } from '../actions/action-types'
+
 
 const initialState = {
     unreadApps: [],
@@ -26,19 +26,19 @@ export const addSubmittedApp = (state=initialState, action) => {
 
 export const getAppsFromDB = (state=initialState, action) => {
     switch(action.type){
-        case FETCH_APPLICATIONS:
-            return
-        case MAP_APPS_TO_CHILDREN:
-            return
+        case FETCH_APPROVED_APPS:
+            state.acceptedApps.push(...action.payload)
+            return state
+        case FETCH_UNREAD_APPS:
+            state.unreadApps.push(...action.payload)
+            return state
         default:
-            return
+            return state
     }
 }
 
 export const changeAppStatus = (state=initialState, action) => {
     switch(action.type){
-        case MARK_UNDECIDED:
-            return
         case MARK_ACCEPTED:
             return
         case MARK_REJECTED:

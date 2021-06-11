@@ -15,7 +15,8 @@ const initialState = {
     email: "",
     phone: "",
     ext1: "",
-    ext2: ""
+    ext2: "",
+    approved: false
 
 }
 

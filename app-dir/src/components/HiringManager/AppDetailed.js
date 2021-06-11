@@ -10,8 +10,7 @@ const useStyles = makeStyles({
   root: {
     minWidth: 300,
     maxWidth: 300,
-    marginBottom: '2rem;',
-    boxSizing: 'border-box;'
+    marginBottom: '2rem;'
   },
   title: {
     fontSize: 14,
@@ -20,7 +19,6 @@ const useStyles = makeStyles({
     marginBottom: 12,
   },
   body: {
-      boxSizing: 'border-box !important;',
     width: '100%;',
     maxWidth: 280
   },
@@ -40,7 +38,7 @@ export default function AppDetailed(props) {
   const {app} = props
 
   return (
-    <Card className={classes.root} raised='true'>
+    <Card className={classes.root} raised={true}>
       <CardContent>
         <Typography variant="h5" component="h2">
         {app.firstName} {app.lastName}
