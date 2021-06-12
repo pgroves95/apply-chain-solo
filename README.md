@@ -4,7 +4,7 @@ It's currently client/customer all packaged in one react/redux app, with a postg
 
 Long-term build out will include: 
 
-##Anticipated Deliverables
+## Anticipated Deliverables
 ### Customer Side
 - Choose which job to apply for
 - Receive email notifications for submission and subsequent responses
